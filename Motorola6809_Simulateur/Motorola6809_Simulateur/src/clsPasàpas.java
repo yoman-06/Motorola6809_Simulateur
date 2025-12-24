@@ -4039,6 +4039,7 @@ public static int binaryToDecimal8bits(String binary) {
                 int octetbas = clsRegisters.U & 0xFF;
                 clsRAM.model.setValueAt(clsRegisters.formatTo2Digits(octetbas), clsRegisters.S, 1);
                 clsRAM.model.setValueAt(clsRegisters.formatTo2Digits(octethaut), --clsRegisters.S, 1);
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.S));
             }
             if((vl & 32) == 32)
             {
@@ -4047,6 +4048,7 @@ public static int binaryToDecimal8bits(String binary) {
                 int octetbas = clsRegisters.Y & 0xFF;
                 clsRAM.model.setValueAt(clsRegisters.formatTo2Digits(octetbas), clsRegisters.S, 1);
                 clsRAM.model.setValueAt(clsRegisters.formatTo2Digits(octethaut), --clsRegisters.S, 1);
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.S));
             }
             if((vl & 16) == 16)
             {
@@ -4055,26 +4057,31 @@ public static int binaryToDecimal8bits(String binary) {
                 int octetbas = clsRegisters.X & 0xFF;
                 clsRAM.model.setValueAt(clsRegisters.formatTo2Digits(octetbas), clsRegisters.S, 1);
                 clsRAM.model.setValueAt(clsRegisters.formatTo2Digits(octethaut), --clsRegisters.S, 1);
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.S));
             }
             if((vl & 8) == 8)
             {
                 clsRegisters.S--;
                 clsRAM.model.setValueAt(clsRegisters.formatTo2Digits(clsRegisters.DP), clsRegisters.S, 1);
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.S));
             }
             if((vl & 4) == 4)
             {
                 clsRegisters.S--;
                 clsRAM.model.setValueAt(clsRegisters.formatTo2Digits(clsRegisters.B), clsRegisters.S, 1);
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.S));
             }
             if((vl & 2) == 2)
             {
                 clsRegisters.S--;
                 clsRAM.model.setValueAt(clsRegisters.formatTo2Digits(clsRegisters.A), clsRegisters.S, 1);
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.S));
             }
             if((vl & 1) == 1)
             {
                 clsRegisters.S--;
                 clsRAM.model.setValueAt(clsRegisters.formatTo2Digits(clsRegisters.CC), clsRegisters.S, 1);
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.S));
             }
         }
         else if(octet1.equals("36"))   // PSHU A,B,X
@@ -4087,7 +4094,7 @@ public static int binaryToDecimal8bits(String binary) {
                 int octetbas = clsRegisters.PC & 0xFF;
                 clsRAM.model.setValueAt(clsRegisters.formatTo2Digits(octetbas), clsRegisters.U, 1);
                 clsRAM.model.setValueAt(clsRegisters.formatTo2Digits(octethaut), --clsRegisters.U, 1);
-                clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.S));
+                clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.U));
             }
             if((vl & 64) == 64)
             {
@@ -4096,6 +4103,7 @@ public static int binaryToDecimal8bits(String binary) {
                 int octetbas = clsRegisters.S & 0xFF;
                 clsRAM.model.setValueAt(clsRegisters.formatTo2Digits(octetbas), clsRegisters.U, 1);
                 clsRAM.model.setValueAt(clsRegisters.formatTo2Digits(octethaut), --clsRegisters.U, 1);
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.U));
             }
             if((vl & 32) == 32)
             {
@@ -4104,6 +4112,7 @@ public static int binaryToDecimal8bits(String binary) {
                 int octetbas = clsRegisters.Y & 0xFF;
                 clsRAM.model.setValueAt(clsRegisters.formatTo2Digits(octetbas), clsRegisters.U, 1);
                 clsRAM.model.setValueAt(clsRegisters.formatTo2Digits(octethaut), --clsRegisters.U, 1);
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.U));
             }
             if((vl & 16) == 16)
             {
@@ -4112,26 +4121,31 @@ public static int binaryToDecimal8bits(String binary) {
                 int octetbas = clsRegisters.X & 0xFF;
                 clsRAM.model.setValueAt(clsRegisters.formatTo2Digits(octetbas), clsRegisters.U, 1);
                 clsRAM.model.setValueAt(clsRegisters.formatTo2Digits(octethaut), --clsRegisters.U, 1);
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.U));
             }
             if((vl & 8) == 8)
             {
                 clsRegisters.U--;
                 clsRAM.model.setValueAt(clsRegisters.formatTo2Digits(clsRegisters.DP), clsRegisters.U, 1);
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.U));
             }
             if((vl & 4) == 4)
             {
                 clsRegisters.U--;
                 clsRAM.model.setValueAt(clsRegisters.formatTo2Digits(clsRegisters.B), clsRegisters.U, 1);
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.U));
             }
             if((vl & 2) == 2)
             {
                 clsRegisters.U--;
                 clsRAM.model.setValueAt(clsRegisters.formatTo2Digits(clsRegisters.A), clsRegisters.U, 1);
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.U));
             }
             if((vl & 1) == 1)
             {
                 clsRegisters.U--;
                 clsRAM.model.setValueAt(clsRegisters.formatTo2Digits(clsRegisters.CC), clsRegisters.U, 1);
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.U));
             }
         }
 
@@ -4140,6 +4154,7 @@ public static int binaryToDecimal8bits(String binary) {
             int vl = parseInt(octet2, 16);
             if((vl & 128) == 128)
             {
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.S));
                 int octethaut = Integer.parseInt(clsRAM.model.getValueAt(clsRegisters.S, 1).toString(), 16);
                 int octetbas = Integer.parseInt(clsRAM.model.getValueAt(++clsRegisters.S, 1).toString(), 16);
                 clsRegisters.PC = Integer.parseInt(clsRegisters.formatTo2Digits(octethaut) + clsRegisters.formatTo2Digits(octetbas), 16);
@@ -4147,6 +4162,7 @@ public static int binaryToDecimal8bits(String binary) {
             }
             if((vl & 64) == 64)
             {
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.S));
                 int octethaut = Integer.parseInt(clsRAM.model.getValueAt(clsRegisters.S, 1).toString(), 16);
                 int octetbas = Integer.parseInt(clsRAM.model.getValueAt(++clsRegisters.S, 1).toString(), 16);
                 clsRegisters.U = Integer.parseInt(clsRegisters.formatTo2Digits(octethaut) + clsRegisters.formatTo2Digits(octetbas), 16);
@@ -4154,6 +4170,7 @@ public static int binaryToDecimal8bits(String binary) {
             }
             if((vl & 32) == 32)
             {
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.S));
                 int octethaut = Integer.parseInt(clsRAM.model.getValueAt(clsRegisters.S, 1).toString(), 16);
                 int octetbas = Integer.parseInt(clsRAM.model.getValueAt(++clsRegisters.S, 1).toString(), 16);
                 clsRegisters.Y = Integer.parseInt(clsRegisters.formatTo2Digits(octethaut) + clsRegisters.formatTo2Digits(octetbas), 16);
@@ -4161,6 +4178,7 @@ public static int binaryToDecimal8bits(String binary) {
             }
             if((vl & 16) == 16)
             {
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.S));
                 int octethaut = Integer.parseInt(clsRAM.model.getValueAt(clsRegisters.S, 1).toString(), 16);
                 int octetbas = Integer.parseInt(clsRAM.model.getValueAt(++clsRegisters.S, 1).toString(), 16);
                 clsRegisters.X = Integer.parseInt(clsRegisters.formatTo2Digits(octethaut) + clsRegisters.formatTo2Digits(octetbas), 16);
@@ -4168,21 +4186,25 @@ public static int binaryToDecimal8bits(String binary) {
             }
             if((vl & 8) == 8)
             {
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.S));
                 clsRegisters.DP = Integer.parseInt(clsRAM.model.getValueAt(clsRegisters.S, 1).toString(), 16);
                 clsRegisters.S++;
             }
             if((vl & 4) == 4)
             {
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.S));
                 clsRegisters.B = Integer.parseInt(clsRAM.model.getValueAt(clsRegisters.S, 1).toString(), 16);
                 clsRegisters.S++;
             }
             if((vl & 2) == 2)
             {
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.S));
                 clsRegisters.A = Integer.parseInt(clsRAM.model.getValueAt(clsRegisters.S, 1).toString(), 16);
                 clsRegisters.S++;
             }
             if((vl & 1) == 1)
             {
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.S));
                 clsRegisters.CC = Integer.parseInt(clsRAM.model.getValueAt(clsRegisters.S, 1).toString(), 16);
                 clsRegisters.S++;
             }
@@ -4192,6 +4214,7 @@ public static int binaryToDecimal8bits(String binary) {
             int vl = parseInt(octet2, 16);
             if((vl & 128) == 128)
             {
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.U));
                 int octethaut = Integer.parseInt(clsRAM.model.getValueAt(clsRegisters.U, 1).toString(), 16);
                 int octetbas = Integer.parseInt(clsRAM.model.getValueAt(++clsRegisters.U, 1).toString(), 16);
                 clsRegisters.PC = Integer.parseInt(clsRegisters.formatTo2Digits(octethaut) + clsRegisters.formatTo2Digits(octetbas), 16);
@@ -4199,6 +4222,7 @@ public static int binaryToDecimal8bits(String binary) {
             }
             if((vl & 64) == 64)
             {
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.U));
                 int octethaut = Integer.parseInt(clsRAM.model.getValueAt(clsRegisters.U, 1).toString(), 16);
                 int octetbas = Integer.parseInt(clsRAM.model.getValueAt(++clsRegisters.U, 1).toString(), 16);
                 clsRegisters.S = Integer.parseInt(clsRegisters.formatTo2Digits(octethaut) + clsRegisters.formatTo2Digits(octetbas), 16);
@@ -4206,6 +4230,7 @@ public static int binaryToDecimal8bits(String binary) {
             }
             if((vl & 32) == 32)
             {
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.U));
                 int octethaut = Integer.parseInt(clsRAM.model.getValueAt(clsRegisters.U, 1).toString(), 16);
                 int octetbas = Integer.parseInt(clsRAM.model.getValueAt(++clsRegisters.U, 1).toString(), 16);
                 clsRegisters.Y = Integer.parseInt(clsRegisters.formatTo2Digits(octethaut) + clsRegisters.formatTo2Digits(octetbas), 16);
@@ -4213,6 +4238,7 @@ public static int binaryToDecimal8bits(String binary) {
             }
             if((vl & 16) == 16)
             {
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.U));
                 int octethaut = Integer.parseInt(clsRAM.model.getValueAt(clsRegisters.U, 1).toString(), 16);
                 int octetbas = Integer.parseInt(clsRAM.model.getValueAt(++clsRegisters.U, 1).toString(), 16);
                 clsRegisters.X = Integer.parseInt(clsRegisters.formatTo2Digits(octethaut) + clsRegisters.formatTo2Digits(octetbas), 16);
@@ -4220,21 +4246,25 @@ public static int binaryToDecimal8bits(String binary) {
             }
             if((vl & 8) == 8)
             {
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.U));
                 clsRegisters.DP = Integer.parseInt(clsRAM.model.getValueAt(clsRegisters.U, 1).toString(), 16);
                 clsRegisters.U++;
             }
             if((vl & 4) == 4)
             {
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.U));
                 clsRegisters.B = Integer.parseInt(clsRAM.model.getValueAt(clsRegisters.U, 1).toString(), 16);
                 clsRegisters.U++;
             }
             if((vl & 2) == 2)
             {
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.U));
                 clsRegisters.A = Integer.parseInt(clsRAM.model.getValueAt(clsRegisters.U, 1).toString(), 16);
                 clsRegisters.U++;
             }
             if((vl & 1) == 1)
             {
+				clsRAM.focusAddress(clsRegisters.formatTo4Digits(clsRegisters.U));
                 clsRegisters.CC = Integer.parseInt(clsRAM.model.getValueAt(clsRegisters.U, 1).toString(), 16);
                 clsRegisters.U++;
             }
@@ -4267,3 +4297,4 @@ public static String hexToBinary(String hex) {
 }
     
 }
+
