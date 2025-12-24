@@ -324,6 +324,8 @@ public static void compiler()
 			{
 				mode = clsAdressingModes.AdressingMode.Immediat;
 				stValue = pshpul(parts[1]);
+				while(stValue.length() < 2)
+                    stValue="0"+stValue;
 			}
         	else if(parts[1].startsWith("#$"))
         	{
@@ -724,3 +726,4 @@ public static ArrayList<String> Decode(ArrayList<String> instruction) {
 	    return dcd;
 	}
 }
+
