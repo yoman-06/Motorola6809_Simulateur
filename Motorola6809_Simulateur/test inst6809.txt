@@ -1,0 +1,71 @@
+LDA #$22;
+LDX #$0001;
+STA $0003;
+inca;inremente a
+INC $0002;
+LDb 2,X;
+
+lds #$1012;
+ldu #$1234;
+stu $1012;
+sts $1234;
+ldb [,s];
+
+lda #$11;
+lds #$0001;
+stA a,s;
+
+lda #$01;
+LDB #$05;
+CMPA #$05;
+ADCB $0004;
+ADDA #$F0;
+
+ldu #$1000;
+ldd #$1234;
+std $1000;
+pulu a,x,b;
+
+ldx #$5555;
+ldb #$74;
+exg b,dp;
+exg x,y;
+lds #$9999;
+exg u,s;
+
+ldx #$5555;
+tfr x,y;
+ldb #$74;
+tfr b,dp;
+tfr pc,s;
+
+ldS #$0012;
+lda #$66;
+sta $0002;
+ldy $-10,s;indexe direct deplacement 5bit
+
+ldy #$000a;
+lda #$44;
+sta $0008;
+ldb ,--y;indexe direct deplacement decr
+
+
+LDA #$42;
+STA $0011;
+LDX #$0011;
+STX $0014;
+LDB [$0014];etendu indirect
+ABX;
+
+ldb #$23;
+INC $0003;
+STB $0002;
+DECB;decrementer
+CLRB;clear
+
+ldx #$4567;
+ldx >$2365;
+
+lds #$1000;
+ldu #$5317;
+pshs u;
